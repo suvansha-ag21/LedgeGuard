@@ -1,0 +1,15 @@
+{
+  "name": "ledgerguard-worker",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node src/index.js"
+  },
+  "dependencies": {
+    "@ledgerguard/core": "*",
+    "pg-boss": "^12.38.0"
+  }
+}

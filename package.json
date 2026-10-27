@@ -1,0 +1,31 @@
+{
+  "name": "ledgerguard",
+  "version": "1.0.0",
+  "description": "Double-entry ledger payments system with AI risk engine and admin dashboard",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*",
+    "simulator"
+  ],
+  "scripts": {
+    "dev": "node scripts/dev.js",
+    "frontend": "npm run dev --workspace=apps/frontend",
+    "backend": "npm run dev --workspace=apps/api",
+    "worker": "npm run dev --workspace=apps/worker",
+    "dev:api": "npm run dev --workspace=apps/api",
+    "dev:frontend": "npm run dev --workspace=apps/frontend",
+    "dev:worker": "npm run dev --workspace=apps/worker",
+    "build": "npm run build --workspace=apps/frontend",
+    "build:frontend": "npm run build --workspace=apps/frontend",
+    "build:backend": "npm run build --workspace=apps/api",
+    "seed": "node packages/core/src/db/seed.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "simulate": "npm run start --workspace=simulator"
+  },
+  "devDependencies": {
+    "vitest": "^3.0.7"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "target": "ES2022",
+    "checkJs": false,
+    "baseUrl": ".",
+    "paths": {
+      "@ledgerguard/core": ["./packages/core/src/index.js"],
+      "@ledgerguard/core/*": ["./packages/core/src/*"]
+    }
+  },
+  "exclude": ["node_modules", "**/dist", "**/.next"]
+}
