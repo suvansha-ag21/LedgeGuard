@@ -29,10 +29,32 @@ LedgeGuard/
 
 ## 🧰 Tech Stack
 
-- Frontend: Add your frontend framework
-- Backend: Add your backend framework
-- Database: Add your database
-- Tools: Git, GitHub, npm
+#### **Frontend**
+* **Framework:** React 18 (Modern ESM & Hooks)
+* **Build Tool:** Vite 6
+* **Routing:** React Router DOM (v6)
+* **Styling:** Tailwind CSS with PostCSS & Autoprefixer
+* **Data Visualization & Charts:** Recharts
+* **Icons:** Lucide React
+* **Client-Side Security Audio:** Web Audio API (synthesized alerts) & Web Speech API (real-time voice guardian)
+  
+#### **Backend & Financial Engine**
+* **Runtime:** Node.js (ESM Monorepo Architecture)
+* **API Framework:** Next.js 15 (Route Handlers)
+* **Ledger Core:** Custom double-entry bookkeeping engine with strict `BIGINT` integer paise arithmetic (`₹1 = 100 paise`, zero decimal float rounding errors)
+* **Concurrency & Safety:** PostgreSQL row-level locks (`SELECT ... FOR UPDATE`) & distributed idempotency keys
+* **Schema Validation:** Zod
+* **Authentication & Security:** JWT (`jose`), bcrypt password hashing, and real-time Account Takeover (ATO) anomaly detection
+* **Logging:** Pino (high-performance structured JSON logging)
+  
+#### **Database & Storage**
+* **Primary Database:** PostgreSQL (ACID-compliant relational database)
+* **Connection Pool:** `pg` with custom 64-bit integer parser and SSL support
+* **In-Memory Testing:** `pg-mem` for zero-latency isolated test suites
+  
+#### **Testing & DevOps**
+* **Testing Framework:** Vitest (40/40 comprehensive invariant, concurrency, and security tests)
+* **Version Control & Package Manager:** Git, GitHub, npm workspaces
 
 ## 🚀 Getting Started
 
